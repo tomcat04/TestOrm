@@ -1,0 +1,18 @@
+package com.wms.core.service;
+
+import java.util.List;
+
+import com.wms.core.domain.Material;
+
+public interface MaterialService {
+
+    public List<Material> selectMaterials();
+
+    public Material selectAll();
+
+    public List<Material> selectListFromList(List<String> list);
+
+    public void insert(Material material);
+
+    public Material selectOne(String materialId);
+}

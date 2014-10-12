@@ -1,0 +1,44 @@
+package com.wms.core.domain;
+
+import java.io.Serializable;
+
+public class Material implements Serializable {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 物料ID
+     */
+    private String materialId;
+
+    /**
+     * 物料描述
+     */
+    private String materialDesc;
+
+    public String getMaterialId() {
+        return materialId;
+    }
+
+    public void setMaterialId(String materialId) {
+        this.materialId = materialId;
+    }
+
+    /**
+     * 物料描述
+     */
+    public String getMaterialDesc() {
+        return materialDesc;
+    }
+
+    /**
+     * 物料描述
+     */
+    public void setMaterialDesc(String materialDesc) {
+        this.materialDesc = materialDesc;
+    }
+
+}
