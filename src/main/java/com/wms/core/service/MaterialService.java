@@ -1,8 +1,9 @@
 package com.wms.core.service;
 
-import com.wms.common.util.WmsException;
+//import com.wms.common.util.WmsException;
 import com.wms.core.domain.Material;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 public interface MaterialService {
 
@@ -16,5 +17,5 @@ public interface MaterialService {
 
     public Material selectOne(String materialId);
     
-    public void createMaterial(Material material) throws WmsException;
+//    public void createMaterial(Material material) throws WmsException;
 }

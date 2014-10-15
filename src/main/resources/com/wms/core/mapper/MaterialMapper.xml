@@ -16,7 +16,7 @@
 		t.MATERIAL_ID='10288330-00'
   </select>
 -->  <select id="selectAll" resultType="Material">
-        select * from WMS_MATERIAL_BASIC
+        select * from ma_material_detail
   </select><!--
   <insert id="insertMaterial" parameterType="Material">
     INSERT INTO wms_material_basic (material_id, material_desc)
@@ -45,12 +45,12 @@
 			</foreach>
 		</if>
   </select>-->
-  <insert id = "insertMaterial" parameterType="Material">
+<!--  <insert id = "insertMaterial" parameterType="Material">
       INSERT INTO WMS_MATERIAL(
       MATERIAL_CODE,MATERIAL_DESC,ORIGINAL_DESC,IMAG_URL
       ) 
       VALUES(
       #{materialId},#{materialDesc},#{originalDesc},#{imageUrl}
       )
-  </insert>
+  </insert>-->
 </mapper>

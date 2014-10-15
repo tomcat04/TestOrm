@@ -29,15 +29,12 @@
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 
-    <context:annotation-config />  
-    <!--扫描包，注册为Bean-->
-    <context:component-scan base-package="com.wms.core.service" />
-<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="typeAliasesPackage" value="com.wms.core.domain" />
-    </bean>-->
+<!--    <context:annotation-config />  
+    扫描包，注册为Bean
+    <context:component-scan base-package="com.wms.core.service" />-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <!--<property name="typeAliasesPackage" value="com.wms.core.domain" />-->
+        <property name="typeAliasesPackage" value="com.wms.core.domain" />
         <!--<property name="mapperLocations" value="com.wms.core.mapper.*,eee.*"></property>-->
         <property name="configLocation" value="mybatis-config.xml" />
     </bean>
@@ -47,29 +44,15 @@
         <property name="basePackage" value="com.wms.core.mapper" />
     </bean>
     
-    <context:property-placeholder location="classpath:oracle-jdbc.properties"/>
+    <context:property-placeholder location="classpath:mysql-jdbc.properties"/>
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${driverClassName}" />
 		<property name="url" value="${url}" />
 		<property name="username" value="${username}" />
 		<property name="password" value="${password}" />
-		<!-- data source configuration -->
-<!--                <property name="initialSize" value="100" />
-                <property name="maxActive" value="2000" />
-                <property name="maxIdle" value="30" />
-                <property name="removeAbandonedTimeout" value="180" />
-                <property name="maxWait" value="10000" />
-                <property name="removeAbandoned" value="true" />
-                <property name="logAbandoned" value="true" />
-                <property name="testOnBorrow" value="true" />
-                <property name="validationQuery" value="SELECT 1 FROM DUAL" />-->
 	</bean>
-	
-
     <!-- transaction manager, use JtaTransactionManager for global tx -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
-    
-    <!--<import resource="classpath:mybatis-config.xml" />-->
 </beans>

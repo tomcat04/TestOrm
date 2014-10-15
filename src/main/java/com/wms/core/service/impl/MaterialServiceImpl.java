@@ -1,6 +1,6 @@
 package com.wms.core.service.impl;
 
-import com.wms.common.util.WmsException;
+//import com.wms.common.util.WmsException;
 import com.wms.core.combobox.SupplyCondition;
 import java.util.List;
 
@@ -63,9 +63,9 @@ public class MaterialServiceImpl implements MaterialService {
      * 添加物料信息
      * @throws WmsException 
      */
-    @Override
-    public void createMaterial(Material material) throws WmsException {
-        materialMapper.insertMaterial(material);
-    }
+//    @Override
+//    public void createMaterial(Material material) throws WmsException {
+//        materialMapper.insertMaterial(material);
+//    }
 
 }
