@@ -5,9 +5,8 @@
  */
 package com.wms.core.service.impl;
 
-import com.wms.core.domain.Material;
 import com.wms.core.mapper.MaterialMapper;
-import com.wms.core.service.MaterialService;
+import com.wms.ma.bean.MaterialSrcBean;
 import com.wms.util.test.WmsSpringJUnit4ClassRunner;
 import java.util.List;
 import org.junit.After;
@@ -60,7 +59,7 @@ public class MaterialServiceImplTest {
      */
     @Test
     public void testSelectAll() {
-        List<Material> list = materialMapper.selectAll();
+        List<MaterialSrcBean> list = materialMapper.selectAll();
         System.out.println("*** " + list.size());
     }
 

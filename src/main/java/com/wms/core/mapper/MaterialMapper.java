@@ -2,19 +2,19 @@ package com.wms.core.mapper;
 
 import java.util.List;
 
-import com.wms.core.domain.Material;
+import com.wms.ma.bean.MaterialSrcBean;
 
 public interface MaterialMapper {
 
-    public Material selectList();
+    public MaterialSrcBean selectList();
 
-    public List<Material> selectAll();
+    public List<MaterialSrcBean> selectAll();
 
-    public List<Material> selectListFromList(List<String> list);
+    public List<MaterialSrcBean> selectListFromList(List<String> list);
 
 //    public void insertMaterial(Material material);
 
-    public Material selectOne(String materialId);
+    public MaterialSrcBean selectOne(String materialId);
     
-    public void insertMaterial(Material material);
+    public void insertMaterial(MaterialSrcBean material);
 }
