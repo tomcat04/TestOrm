@@ -15,4 +15,8 @@
             SELECT LAST_INSERT_ID() as id;
         </selectKey>
     </insert>
+    
+    <select id="selectOne" resultType="MaterialSrcBean" parameterType="String">
+        select * from ma_material_detail where materialcode = #{materialCode}
+    </select>
 </mapper>
