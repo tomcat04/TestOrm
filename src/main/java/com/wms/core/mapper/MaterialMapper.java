@@ -8,5 +8,7 @@ public interface MaterialMapper {
 
 
     public List<MaterialSrcBean> selectAll();
+    
+    public long insetOne(MaterialSrcBean msb);
 
 }

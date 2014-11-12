@@ -24,10 +24,10 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
  * @author chengangxiong
  */
 @RunWith(WmsSpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:applicationContext-core-orm.xml"})
+@ContextConfiguration(locations = {"classpath:applicationContext-orm.xml"})
 //@ContextConfiguration(locations={"file:src/main/java/applicationContext-core.xml"})
 @TransactionConfiguration(defaultRollback = false)
-public class MaterialServiceImplTest {
+public class MaterialMapperTest {
 
     /**
      * 设置自动注入的属性
@@ -35,7 +35,7 @@ public class MaterialServiceImplTest {
     @Autowired
     private MaterialMapper materialMapper;
 
-    public MaterialServiceImplTest() {
+    public MaterialMapperTest() {
     }
 
     @BeforeClass
@@ -59,8 +59,12 @@ public class MaterialServiceImplTest {
      */
     @Test
     public void testSelectAll() {
-        List<MaterialSrcBean> list = materialMapper.selectAll();
-        System.out.println("*** " + list.size());
+        MaterialSrcBean m = new MaterialSrcBean();
+        m.setMaterialCode("eer");
+        m.setMaterialDesc("uuii");
+        m.setMaterialSrc("09iu");
+        long l = materialMapper.insetOne(m);
+        System.out.println("*** " + l);
     }
 
 }

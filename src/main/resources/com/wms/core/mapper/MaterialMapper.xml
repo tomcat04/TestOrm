@@ -4,8 +4,16 @@
 
 <mapper namespace="com.wms.core.mapper.MaterialMapper">
 
-  <!--<cache />-->
-<select id="selectAll" resultType="MaterialSrcBean">
+    <!--<cache />-->
+    <select id="selectAll" resultType="MaterialSrcBean">
         select * from ma_material_detail
-  </select>
+    </select>
+    <insert id="insetOne" parameterType="MaterialSrcBean">
+        insert into 
+            ma_material_detail(materialcode,materialdesc,materialsrc) 
+        values(#{materialCode},#{materialDesc},#{materialSrc});
+        <selectKey resultType="java.lang.Long" keyProperty="id">   
+            SELECT LAST_INSERT_ID() as id;
+        </selectKey>
+    </insert>
 </mapper>
