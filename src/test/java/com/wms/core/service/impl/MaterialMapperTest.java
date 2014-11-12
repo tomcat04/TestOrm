@@ -60,7 +60,7 @@ public class MaterialMapperTest {
     @Test
     public void testSelectAll() {
         MaterialSrcBean m = new MaterialSrcBean();
-        m.setMaterialCode("eer");
+        m.setMaterialCode("ggb");
         m.setMaterialDesc("uuii");
         m.setMaterialSrc("09iu");
         long l = materialMapper.insetOne(m);

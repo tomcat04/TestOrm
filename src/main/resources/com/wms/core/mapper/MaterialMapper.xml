@@ -4,7 +4,6 @@
 
 <mapper namespace="com.wms.core.mapper.MaterialMapper">
 
-    <!--<cache />-->
     <select id="selectAll" resultType="MaterialSrcBean">
         select * from ma_material_detail
     </select>

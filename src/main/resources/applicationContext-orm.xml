@@ -34,9 +34,9 @@
     <context:component-scan base-package="com.wms.core.service" />-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="typeAliasesPackage" value="com.wms.core.domain,com.wms.ma.bean" />
-        <property name="mapperLocations" value="com.wms.core.mapper.*,eee.*"></property>
-        <!--<property name="configLocation" value="mybatis-config.xml" />-->
+        <!--<property name="typeAliasesPackage" value="com.wms.core.domain,com.wms.ma.bean" />-->
+        <!--<property name="mapperLocations" value="com.wms.core.mapper.*,eee.*"></property>-->
+        <property name="configLocation" value="classpath:mybatis-config.xml" />
     </bean>
     
     <!-- scan for mappers and let them be autowired -->
